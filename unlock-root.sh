@@ -38,7 +38,8 @@ LEN=512
 
 out()
 {
-echo "$*" >&2
+# GitHub disklikes stray CR in a text.  WTF?
+echo -e "$*\\r" >&2
 }
 
 out "Loading USB"
