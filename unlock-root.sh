@@ -1,8 +1,9 @@
 #!/bin/sh
 #
-# Check this out to /root/LUKS
+# Getting started:
 #	root
 #	git clone https://github.com/hilbix/LUKS
+# This checks it out under /root/LUKS/
 #
 # Decide:
 #	KEY=/dev/disk/by-id/usb-THE-DEVICE-YOU-WANT-TO-USE
