@@ -22,13 +22,12 @@
 # Alter this script here (/root/LUKS/unlock-root.sh):
 # set KEY=$KEY and LEN=$LEN from above into below values.
 #
-# Add this script here (/root/LUKS/unlock-root.sh) to /etc/crypttab
+# Add this script here (/root/LUKS/unlock-root.sh) as keyscript to /etc/crypttab
 #	vim /etc/crypttab
-# edit (or similar):
+# edit all encrypted devices/$UUIDs to automatically unlock like:
 #	root_crypt UUID=$UUID none luks
 # into:
 #	root_crypt UUID=$UUID none luks,keyscript=/root/LUKS/unlock-root.sh
-# Do this for all of the devices/$UUIDs which should be automatically unlocked.
 #
 # Update your ramdisk:
 #	update-initramfs -u
