@@ -19,8 +19,8 @@
 #	cryptsetup luksAddKey /dev/disk/by-uuid/$UUID <(dd if=$KEY bs=$LEN count=1)
 # You can repeat that for other encrypted disks in /etc/crypttab
 #
-# Alter this script
-#	below set KEY=$KEY and LEN=$LEN from above
+# Alter this script here (/root/LUKS/unlock-root.sh):
+# set KEY=$KEY and LEN=$LEN from above into below values.
 #
 # Add this script here (/root/LUKS/unlock-root.sh) to /etc/crypttab
 #	vim /etc/crypttab
