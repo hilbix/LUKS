@@ -24,9 +24,11 @@
 #
 # Add this script here (/root/LUKS/unlock-root.sh) to /etc/crypttab
 #	vim /etc/crypttab
-#		root_crypt UUID=$$$UUID$$$ none luks,keyscript=/root/LUKS/unlock-root.sh
-# Just add the ",keyscript=/root/LUKS/unlock-root.sh" to all of the devices which should
-# be automatically unlocked.  ($$$UUID$$$ usually is the UUID from above!)
+# edit (or similar):
+#	root_crypt UUID=$UUID none luks
+# into:
+#	root_crypt UUID=$UUID none luks,keyscript=/root/LUKS/unlock-root.sh
+# Do this for all of the devices/$UUIDs which should be automatically unlocked.
 #
 # Update your ramdisk:
 #	update-initramfs -u
